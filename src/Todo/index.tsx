@@ -13,7 +13,7 @@ const Todo = () => {
     { id: 0, value: "ahoj", checked: true },
     { id: 1, value: "nazdar", checked: true },
     { id: 2, value: "cau", checked: true },
-  ]); //
+  ]);
 
   return (
     <div className="w-screen min-h-screen p-8 bg-yellow-50">

@@ -9,14 +9,12 @@ const TodoAdder: FC<TodoAdderInterface> = ({ setTodoList }) => {
   const initialTodoValue: TodoInterface = { checked: false, value: "", id: -1 };
   const [newTodoValue, setNewTodoValue] = useState<TodoInterface>(initialTodoValue);
 
-  console.log(newTodoValue);
-
   const submitNewTodo = () => {
     if (newTodoValue.value === "") {
       return;
     }
 
-    setTodoList((prevState) => [...prevState, newTodoValue]);
+    setTodoList((prevState) => [...prevState, { checked: newTodoValue.checked, id: prevState.length, value: newTodoValue.value }]);
     setNewTodoValue(initialTodoValue);
   };
 
